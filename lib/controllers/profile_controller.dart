@@ -16,6 +16,8 @@ class ProfileController extends GetxController {
 
   var isloading = false.obs;
 
+
+
   var nameController = TextEditingController();
   var oldPassController = TextEditingController();
   var newPassController = TextEditingController();
@@ -44,6 +46,7 @@ class ProfileController extends GetxController {
     return profileImageLink;
 
   }
+
 
   updateProfile({name,password,imgUrl}) async{
     var store = firestore.collection(usersCollection).doc(currentUser!.uid);

@@ -6,10 +6,12 @@ import 'package:e_mart/views/profile_screen/profile_screen.dart';
 import 'package:e_mart/widgets_common/bg_widget.dart';
 import 'package:e_mart/widgets_common/custom_textfield.dart';
 import 'package:e_mart/widgets_common/our_button.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get/get.dart';
 
 class EditProfileScreen extends StatelessWidget {
   final dynamic data;
+
 
   const EditProfileScreen({super.key, this.data});
 
@@ -29,6 +31,7 @@ class EditProfileScreen extends StatelessWidget {
               child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
+
                 data['imgUrl'] == '' && controller.profileImgPath.isEmpty
                     ? Image.asset(imgProfile2, width: 100,fit: BoxFit.cover,).box.roundedFull.clip(Clip.antiAlias).make()
                     : data['imgUrl'] != '' && controller.profileImgPath.isEmpty
@@ -37,9 +40,11 @@ class EditProfileScreen extends StatelessWidget {
                         : Image.file(File(controller.profileImgPath.value),width: 100,fit: BoxFit.cover,)
                            .box.roundedFull.clip(Clip.antiAlias).make(),
                 10.heightBox,
+
                 ourButton(color: redColor,textColor: whiteColor,title: "Change",onPress: (){
                   controller.changeImage(context);
                 }),
+
                 const Divider(),
                 20.heightBox,
                 customTextField(controller: controller.nameController,hint: nameHint,title: name,isPass: false),
