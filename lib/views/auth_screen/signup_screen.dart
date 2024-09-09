@@ -57,9 +57,9 @@ class _SignupScreenState extends State<SignupScreen> {
                         checkColor: whiteColor,
                         value: isCheck,
                         onChanged: (newValue) {
-                        setState(() {
-                          isCheck = newValue;
-                        });
+                          setState(() {
+                            isCheck = newValue;
+                          });
                         },
                       ),
                       10.widthBox,
@@ -67,8 +67,8 @@ class _SignupScreenState extends State<SignupScreen> {
                         child: RichText(text: const TextSpan(
                           children: [
                             TextSpan(text:"I agree to the ",style: TextStyle(
-                            fontFamily: regular,
-                            color: fontGrey,
+                              fontFamily: regular,
+                              color: fontGrey,
                             )),
                             TextSpan(text:termsAndCond,style: TextStyle(
                               fontFamily: regular,
