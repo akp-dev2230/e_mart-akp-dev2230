@@ -16,7 +16,7 @@ class ItemDetails extends StatelessWidget {
     var controller = Get.put(ProductController());
     return PopScope(
       canPop: false,
-      onPopInvoked: (bool didPop){
+      onPopInvokedWithResult: (bool didPop, dynamic result){
         if(didPop){
           return;
         }
@@ -136,7 +136,7 @@ class ItemDetails extends StatelessWidget {
                                             children: [
                                               VxBox().size(40.0, 40.0)
                                               .roundedFull
-                                              .color(Color(data['p_colors'][index]).withOpacity(1.0))
+                                              .color(Color(data['p_colors'][index]).withValues(alpha: 255))
                                               .margin(const EdgeInsets.symmetric(horizontal: 4.0)).make().onTap((){
                                                 controller.changeColorIndex(index);
                                               }),

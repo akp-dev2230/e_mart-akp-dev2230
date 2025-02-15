@@ -3,7 +3,6 @@ import 'package:e_mart/consts/consts.dart';
 import 'package:e_mart/models/category_model.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
 class ProductController extends GetxController{
 
   var quantity = 0.obs;

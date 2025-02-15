@@ -3,7 +3,7 @@ import 'package:e_mart/views/auth_screen/login_screen.dart';
 import 'package:e_mart/views/home_screen/home.dart';
 import 'package:e_mart/widgets_common/applogo_widget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:get/get.dart';
+
 
 
 class SplashScreen extends StatefulWidget {
