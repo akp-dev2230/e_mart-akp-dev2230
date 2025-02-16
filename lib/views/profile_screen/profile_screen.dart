@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_mart/consts/consts.dart';
-import 'package:e_mart/consts/firebase_consts.dart';
 import 'package:e_mart/consts/lists.dart';
 import 'package:e_mart/controllers/auth_controller.dart';
 import 'package:e_mart/controllers/profile_controller.dart';
@@ -72,7 +71,7 @@ class ProfileScreen extends StatelessWidget {
                             ),
                             PopScope(
                               canPop: false,
-                              onPopInvoked: (bool didPop) async{
+                              onPopInvokedWithResult: (bool didPop, dynamic result) async{
                                 if(didPop){
                                   return;
                                 }
